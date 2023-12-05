@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Modifier une ligne de commande</h2>
+    <form (submit)="modifierLigneDeCommande()">
+        <div class="form-group">
+            <label for="numero_commande">Numéro de commande :</label>
+            <input type="text" class="form-control" id="numero_commande" name="numero_commande" required [(ngModel)]="ligneDeCommande.numero_commande" readonly>
+        </div>
+        <div class="form-group">
+            <label for="reference">Référence :</label>
+            <input type="text" class="form-control" id="reference" name="reference" required [(ngModel)]="ligneDeCommande.reference" readonly>
+        </div>
+        <div class="form-group">
+            <label for="quantite">Quantité :</label>
+            <input type="number" class="form-control" id="quantite" name="quantite" required [(ngModel)]="ligneDeCommande.quantite">
+        </div>
+        <button type="submit" class="btn btn-primary">Modifier la ligne de commande</button>
+    </form>
+</div>

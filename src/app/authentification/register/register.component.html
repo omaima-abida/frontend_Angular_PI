@@ -1,0 +1,30 @@
+<!-- register.component.html -->
+
+<div class="register-container">
+  <h2>Register</h2>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required />
+    </div>
+
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" [(ngModel)]="firstname" required />
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" [(ngModel)]="lastname" required />
+    </div>
+
+    <button type="submit" (click)="onRegisterClick()">Register</button>
+    <!-- <button type="submit">Register</button> -->
+  </form>
+</div>

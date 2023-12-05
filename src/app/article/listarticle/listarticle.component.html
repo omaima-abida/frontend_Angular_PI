@@ -1,0 +1,47 @@
+<!-- listarticle.component.html -->
+
+<div class="article-list">
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Désignation</th>
+        <th>Marque</th>
+        <th>Prix</th>
+        <th>Quantité en stock</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let article of articles">
+        <tr>
+          <td>
+            <img [src]="article.imageart" alt="{{ article.designation }}" width="50" height="50">
+          </td>
+          <td>{{article.designation}}</td>
+          <td>{{ article.marque }}</td>
+          <td>{{ article.prix }}</td>
+          <td>{{ article.qtestock }}</td>
+          <td>
+            <button (click)="onEdit(article)">Modifier</button>
+            <button (click)="onDelete(article)">Supprimer</button>
+          </td>
+        </tr>
+
+        <tr *ngIf="articleToEdit === article">
+          <td colspan="6">
+            <!-- Inclure ici votre formulaire de modification -->
+            <app-modifarticle [article]="articleToEdit" (cancelEdit)="onCancelEdit()"></app-modifarticle>
+          </td>
+        </tr>
+
+        <tr *ngIf="articleToDelete === article">
+          <td colspan="6">
+            <!-- Inclure ici votre composant supprimarticle -->
+            <app-supprimarticle [article]="articleToDelete" (confirmDelete)="onConfirmDelete()" (cancelDelete)="onCancelDelete()"></app-supprimarticle>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

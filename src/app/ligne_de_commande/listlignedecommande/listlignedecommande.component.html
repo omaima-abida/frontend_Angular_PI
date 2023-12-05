@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+
+
+<!-- listlignedecommande.component.html -->
+<div class="container">
+    <h2>Liste des lignes de commande</h2>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Numéro de commande</th>
+          <th scope="col">Référence</th>
+          <th scope="col">Quantité</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Utilisez *ngFor pour itérer sur la liste de lignes de commande -->
+        <tr *ngFor="let ligneDeCommande of listeLignesDeCommande">
+          <td>{{ ligneDeCommande.numero_commande }}</td>
+          <td>{{ ligneDeCommande.reference }}</td>
+          <td>{{ ligneDeCommande.quantite }}</td>
+          <td>
+            <!-- Ajoutez des boutons pour les actions (détails, mise à jour, suppression, etc.) -->
+            <button (click)="afficherDetails(ligneDeCommande.numero_commande, ligneDeCommande.reference)" class="btn btn-info btn-sm">Détails</button>
+            <button (click)="editerLigneDeCommande(ligneDeCommande.numero_commande, ligneDeCommande.reference)" class="btn btn-warning btn-sm">Éditer</button>
+            <button (click)="supprimerLigneDeCommande(ligneDeCommande.numero_commande, ligneDeCommande.reference)" class="btn btn-danger btn-sm">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,36 @@
+<!-- modifarticle.component.html -->
+
+<div class="modif-article-container">
+  <h2>Modifier l'article</h2>
+
+  <form (ngSubmit)="modifierArticle()">
+    <div class="form-group">
+      <label for="designation">Désignation:</label>
+      <input type="text" id="designation" name="designation" [(ngModel)]="article.designation" required />
+    </div>
+
+    <div class="form-group">
+      <label for="marque">Marque:</label>
+      <input type="text" id="marque" name="marque" [(ngModel)]="article.marque" required />
+    </div>
+
+    <div class="form-group">
+      <label for="prix">Prix:</label>
+      <input type="number" id="prix" name="prix" [(ngModel)]="article.prix" required />
+    </div>
+
+    <div class="form-group">
+      <label for="qtestock">Quantité en stock:</label>
+      <input type="number" id="qtestock" name="qtestock" [(ngModel)]="article.qtestock" required />
+    </div>
+
+    <div class="form-group">
+      <label for="imageart">Image URL:</label>
+      <input type="text" id="imageart" name="imageart" [(ngModel)]="article.imageart" required />
+    </div>
+
+    <button type="submit">Enregistrer les modifications</button>
+
+    <button (click)="onCancelEdit()">Annuler</button>
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<!-- supprimcommande.component.html -->
+<div class="container">
+    <h2>Supprimer une commande</h2>
+
+    <p>Voulez-vous vraiment supprimer la commande avec le numéro <strong>{{ numero_Commande }}</strong>?</p>
+
+    <button type="button" class="btn btn-danger" (click)="confirmerSuppression()">Confirmer la suppression</button>
+    <button type="button" class="btn btn-secondary" (click)="annulerSuppression()">Annuler</button>
+</div>
+

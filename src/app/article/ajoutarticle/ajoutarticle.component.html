@@ -1,0 +1,44 @@
+<!-- ajoutarticle.component.html -->
+<div>
+    <h2>Ajouter un nouvel article</h2>
+  
+    <!-- Formulaire d'ajout d'article -->
+    <form (submit)="ajouterArticle()">
+      <div>
+        <label for="reference">Référence :</label>
+        <input type="text" id="reference" name="reference" required [(ngModel)]="nouvelArticle.reference">
+      </div>
+  
+      <div>
+        <label for="designation">Désignation :</label>
+        <input type="text" id="designation" name="designation" required [(ngModel)]="nouvelArticle.designation">
+      </div>
+  
+      <div>
+        <label for="prix">Prix :</label>
+        <input type="number" id="prix" name="prix" required [(ngModel)]="nouvelArticle.prix">
+      </div>
+  
+      <div>
+        <label for="marque">Marque :</label>
+        <input type="text" id="marque" name="marque" required [(ngModel)]="nouvelArticle.marque">
+      </div>
+  
+      <div>
+        <label for="qtestock">Quantité en stock :</label>
+        <input type="number" id="qtestock" name="qtestock" required [(ngModel)]="nouvelArticle.qtestock">
+      </div>
+  
+      <div>
+        <label for="imageart">URL de l'image :</label>
+        <input type="text" id="imageart" name="imageart" [(ngModel)]="nouvelArticle.imageart">
+      </div>
+  
+      <!-- Ajoutez d'autres champs du formulaire en fonction de vos besoins -->
+  
+      <div>
+        <button type="submit">Ajouter l'article</button>
+      </div>
+    </form>
+  </div>
+  

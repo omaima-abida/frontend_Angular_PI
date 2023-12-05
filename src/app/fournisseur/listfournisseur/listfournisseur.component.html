@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+
+<div>
+    <h2>Liste des fournisseurs</h2>
+  
+    <!-- Affichage de la liste des fournisseurs -->
+    <ul>
+      <li *ngFor="let fournisseur of fournisseurs">
+        <div>
+          <h3>{{ fournisseur.raison_sociale }}</h3>
+          <p>ID : {{ fournisseur.id_frs }}</p>
+          <p>Adresse : {{ fournisseur.adresse }}</p>
+          <p>Téléphone : {{ fournisseur.telephone }}</p>
+          <!-- Ajoutez d'autres champs du fournisseur en fonction de vos besoins -->
+        </div>
+      </li>
+    </ul>
+  </div>
+  

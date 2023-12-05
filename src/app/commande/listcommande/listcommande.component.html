@@ -1,0 +1,34 @@
+<!-- listcommande.component.html -->
+<div class="container">
+    <h2>Liste des commandes</h2>
+  
+    <table class="table">
+      <!-- <div>
+      <app-menu></app-menu>
+    </div> -->
+
+      <thead>
+        <tr>
+          <th scope="col">Numéro de commande</th>
+          <th scope="col">Date de commande</th>
+          <th scope="col">ID du fournisseur</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Utilisez *ngFor pour itérer sur la liste de commandes -->
+        <tr *ngFor="let commande of listeCommandes">
+          <td>{{ commande.numero_commande }}</td>
+          <td>{{ commande.date_commande | date:'shortDate' }}</td>
+          <td>{{ commande.id_frs }}</td>
+          <td>
+            <!-- Ajoutez des boutons pour les actions (détails, mise à jour, suppression, etc.)
+            <button (click)="afficherDetails(commande.numero_commande)" class="btn btn-info btn-sm">Détails</button>
+            <button (click)="editerCommande(commande.numero_commande)" class="btn btn-warning btn-sm">Éditer</button>
+            <button (click)="supprimerCommande(commande.numero_commande)" class="btn btn-danger btn-sm">Supprimer</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
